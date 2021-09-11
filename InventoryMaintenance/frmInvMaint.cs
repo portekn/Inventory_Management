@@ -18,6 +18,7 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the list of items.
+        List<InvItem> invItems = null;
 
         private void frmInvMaint_Load(object sender, EventArgs e)
         {
