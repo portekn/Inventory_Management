@@ -22,6 +22,8 @@ namespace InventoryMaintenance
         }
 
         // Add a method here that gets and returns a new item.
+        public void GetNewItem(string newItem) 
+        { }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
