@@ -23,6 +23,7 @@ namespace InventoryMaintenance
         private void frmInvMaint_Load(object sender, EventArgs e)
         {
             // Add a statement here that gets the list of items.
+            InvItemDB.GetItems();
             FillItemListBox();
         }
 
