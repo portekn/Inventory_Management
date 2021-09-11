@@ -16,21 +16,18 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the inventory item.
-        private void invItem()
-        {
-            InvItem invItem = null;
-        }
+        public InvItem invItem = null;
 
         // Add a method here that gets and returns a new item.
-        public InvItem GetNewItem(InvItem newItem) 
-        { return newItem; }
+        public InvItem GetNewItem(InvItem invItem) 
+        { return invItem; }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (IsValidData())
             {
                 // Add code here that creates a new item
-                invItem();
+                new InvItem();
                 // and closes the form
                 ActiveForm.Close();
             }
