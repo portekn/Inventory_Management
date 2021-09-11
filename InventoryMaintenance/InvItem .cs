@@ -15,7 +15,7 @@ namespace InventoryMaintenance
         public string Description
         { get; set; }
         //Price - Gets or sets a decimal that contains the item’s price.
-        public double Price 
+        public decimal Price 
         { get; set;}
 
         //----------Methods----------//
@@ -23,7 +23,7 @@ namespace InventoryMaintenance
                              description, and price formatted like this:3245649    
                              Agapanthus ($7.95). (The item number and description 
                              are separated by four spaces.)*/
-        public static string GetDisplayText(int ItemNo, string Description, double Price)
+        public static string GetDisplayText(int ItemNo, string Description, decimal Price)
         {
             string disText = ItemNo + "    " + Description + " (" + Price.ToString("C", CultureInfo.CurrentCulture) + ")";
             return disText;
@@ -34,7 +34,7 @@ namespace InventoryMaintenance
         //(itemNo, description, price) - Creates an InvItemobject withthe specified values.
 
         public InvItem() { }
-        public InvItem(int ItemNo, string Description, double Price) 
+        public InvItem(int ItemNo, string Description, decimal Price) 
         {
             this.ItemNo = ItemNo;
             this.Description = Description;
