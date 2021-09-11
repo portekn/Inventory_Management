@@ -37,9 +37,9 @@ namespace InventoryMaintenance
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Add code here that creates an instance of the New Item form
-            frmNewItem.GetNewItem();
+            frmNewItem.GetNewItem(newItem);
             // and then gets a new item from that form.
-            InvItemDB.SaveItems();
+            InvItemDB.SaveItems(invItems);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -48,8 +48,10 @@ namespace InventoryMaintenance
             if (i != -1)
             {
                 // Add code here that displays a dialog box to confirm
+                
                 // the deletion and then removes the item from the list,
                 // saves the list of products, and refreshes the list box
+                InvItemDB.SaveItems(invItems);
                 // if the deletion is confirmed.
             }
         }
