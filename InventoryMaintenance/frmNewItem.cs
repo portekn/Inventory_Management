@@ -16,6 +16,10 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the inventory item.
+        private void invItem()
+        {
+            InvItem invItem = null;
+        }
 
         // Add a method here that gets and returns a new item.
 
