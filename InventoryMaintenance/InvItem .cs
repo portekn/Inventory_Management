@@ -4,12 +4,18 @@ using System.Text;
 
 namespace InventoryMaintenance
 {
-    public static class InvItem
+    public class InvItem
     {
-        //Propertys
+        //----------Properties----------//
         //ItemNo - Gets or sets an int that contains the item’s number.
+        public int ItemNo
+        { get; set; }
         //Description - Gets or sets a string that contains the item’s description.
+        public string Description
+        { get; set; }
         //Price - Gets or sets a decimal that contains the item’s price.
+        public double Price 
+        { get; set;}
 
         //Methods
         /*GetDisplayText() - Returns a string that contains the item’s number, 
