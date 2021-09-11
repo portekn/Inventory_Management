@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace InventoryMaintenance
@@ -17,11 +18,17 @@ namespace InventoryMaintenance
         public double Price 
         { get; set;}
 
-        //Methods
+        //----------Methods----------//
         /*GetDisplayText() - Returns a string that contains the item’s number, 
                              description, and price formatted like this:3245649    
                              Agapanthus ($7.95). (The item number and description 
                              are separated by four spaces.)*/
+        public static string GetDisplayText(int ItemNo, string Description, double Price)
+        {
+            string disText = ItemNo + "    " + Description + " (" + Price.ToString("C", CultureInfo.CurrentCulture) + ")";
+            return disText;
+        
+        }
         //Constructor
         //() - Creates an InvItemobject with default values.
         //(itemNo, description, price) - Creates an InvItemobject withthe specified values.
