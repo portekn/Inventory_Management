@@ -37,7 +37,9 @@ namespace InventoryMaintenance
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Add code here that creates an instance of the New Item form
+            frmNewItem.GetNewItem();
             // and then gets a new item from that form.
+            InvItemDB.SaveItems();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
