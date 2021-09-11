@@ -23,7 +23,7 @@ namespace InventoryMaintenance
                              description, and price formatted like this:3245649    
                              Agapanthus ($7.95). (The item number and description 
                              are separated by four spaces.)*/
-        public static string GetDisplayText(int ItemNo, string Description, decimal Price)
+        public string GetDisplayText(int ItemNo, string Description, decimal Price)
         {
             string disText = ItemNo + "    " + Description + " (" + Price.ToString("C", CultureInfo.CurrentCulture) + ")";
             return disText;
