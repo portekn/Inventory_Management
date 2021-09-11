@@ -29,8 +29,12 @@ namespace InventoryMaintenance
             return disText;
         
         }
-        //Constructor
+        //----------Constructor----------//
         //() - Creates an InvItemobject with default values.
         //(itemNo, description, price) - Creates an InvItemobject withthe specified values.
+
+        public InvItem() { }
+        public InvItem(int InvItem, string Description, decimal Price) { }
+
     }
 }
