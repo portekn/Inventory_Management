@@ -22,15 +22,17 @@ namespace InventoryMaintenance
         }
 
         // Add a method here that gets and returns a new item.
-        public void GetNewItem(string newItem) 
-        { return ""; }
+        public InvItem GetNewItem(InvItem newItem) 
+        { return newItem; }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (IsValidData())
             {
                 // Add code here that creates a new item
-                // and closes the form.
+                invItem();
+                // and closes the form
+                ActiveForm.Close();
             }
         }
 

@@ -34,11 +34,11 @@ namespace InventoryMaintenance
         //(itemNo, description, price) - Creates an InvItemobject withthe specified values.
 
         public InvItem() { }
-        public InvItem(int ItemNo, string Description, decimal Price) 
+        public InvItem(int itemNo, string description, decimal price) 
         {
-            this.ItemNo = ItemNo;
-            this.Description = Description;
-            this.Price = Price;
+            this.ItemNo = itemNo;
+            this.Description = description;
+            this.Price = price;
         }
 
     }
