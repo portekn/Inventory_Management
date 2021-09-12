@@ -31,7 +31,7 @@ namespace InventoryMaintenance
         {
             // Add code here that loads the list box with the items in the list.
             lstItems.Items.Clear();
-            invItems.ForEach(x => lstItems.Items.Add(x.GetDisplayText(",")));
+            invItems.ForEach(x => lstItems.Items.Add(x.GetDisplayText("    ")));
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
