@@ -29,8 +29,8 @@ namespace InventoryMaintenance
 
         private void FillItemListBox()
         {
-            lstItems.Items.Clear();
             // Add code here that loads the list box with the items in the list.
+            lstItems.Items.Clear();
             InvItem item;
             for (int i = 0; i < invItems.Count; i++)
             {
