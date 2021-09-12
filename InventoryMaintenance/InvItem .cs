@@ -11,14 +11,11 @@ namespace InventoryMaintenance
         //Kelli Porter
         //----------Properties----------//
         //ItemNo - Gets or sets an int that contains the item’s number.
-        public int ItemNo
-        { get; set; }
+        public int ItemNo { get; set; }
         //Description - Gets or sets a string that contains the item’s description.
-        public string Description
-        { get; set; }
+        public string Description { get; set; }
         //Price - Gets or sets a decimal that contains the item’s price.
-        public decimal Price 
-        { get; set;}
+        public decimal Price { get; set;}
 
         //Kelli Porter
         //----------Methods----------//
@@ -40,6 +37,5 @@ namespace InventoryMaintenance
             this.Description = Description;
             this.Price = Price;
         }
-
     }
 }
