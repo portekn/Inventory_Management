@@ -30,6 +30,7 @@ namespace InventoryMaintenance
             if (IsValidData())
             {
                 // Add code here that creates a new item
+
                 invItem = new InvItem(Convert.ToInt32(txtItemNo), txtDescription.Text, Convert.ToDecimal(txtPrice));
                 // and closes the form
                 this.Close();
