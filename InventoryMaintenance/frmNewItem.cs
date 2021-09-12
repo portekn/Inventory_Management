@@ -16,11 +16,12 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the inventory item.
-        public InvItem invItem = null;
+        private InvItem invItem = null;
 
         // Add a method here that gets and returns a new item.
-        public InvItem GetNewItem(InvItem invItem) 
+        public InvItem GetNewItem() 
         {
+            this.ShowDialog();
             return invItem;
         }
 
@@ -29,9 +30,9 @@ namespace InventoryMaintenance
             if (IsValidData())
             {
                 // Add code here that creates a new item
-                new InvItem();
+                invItem = new InvItem(Convert.ToInt32(txtItemNo), txtDescription.Text, Convert.ToDecimal(txtPrice));
                 // and closes the form
-                ActiveForm.Close();
+                this.Close();
             }
         }
 

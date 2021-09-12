@@ -31,28 +31,57 @@ namespace InventoryMaintenance
         {
             lstItems.Items.Clear();
             // Add code here that loads the list box with the items in the list.
-            lstItems.Items.Add(invItems);
+            InvItem item;
+            for (int i = 0; i < invItems.Count; i++)
+            {
+                item = invItems[i];
+                lstItems.Items.Add(item);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Add code here that creates an instance of the New Item form
-            frmNewItem.GetNewItem(invItem);
+            frmNewItem newItemForm = new frmNewItem();
             // and then gets a new item from that form.
-            InvItemDB.SaveItems(invItems);
-        }
+            InvItem invItem = newItemForm.GetNewItem();
 
-        private void btnDelete_Click(object sender, EventArgs e)
+            if (invItem != null)
+            {
+                invItems.Add(invItem);
+                FillItemListBox();
+            }
+        }
+            private void btnDelete_Click(object sender, EventArgs e)
         {
             int i = lstItems.SelectedIndex;
             if (i != -1)
             {
                 // Add code here that displays a dialog box to confirm
                 // the deletion and then removes the item from the list,
-                lstItems.Items.Clear();
-                // saves the list of products, and refreshes the list box
+                // saves the list of products, and refreshes the list box.
                 // if the deletion is confirmed.
-                InvItemDB.SaveItems(invItems);
+
+                InvItem invItem = invItems[i];
+
+                string message = "Are you sure you want to delete " + invItem + "?";
+
+                DialogResult button = MessageBox.Show(message, "Confirm the delete", MessageBoxButtons.YesNo);
+
+                if (button == DialogResult.Yes)
+
+                {
+
+                    //invItems -= invItem;
+
+                    invItems.Remove(invItem);
+
+                    InvItemDB.SaveItems(invItems);
+
+                    FillItemListBox();
+
+                }
+
             }
         }
 
