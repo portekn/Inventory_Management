@@ -56,24 +56,17 @@ namespace InventoryMaintenance
                 // saves the list of products, and refreshes the list box.
                 // if the deletion is confirmed.
 
-                InvItem invItem = invItems[i];
 
+                string invItem = lstItems.SelectedItem.ToString();
                 string message = "Are you sure you want to delete " + invItem + "?";
 
                 DialogResult button = MessageBox.Show(message, "Confirm the delete", MessageBoxButtons.YesNo);
 
+
                 if (button == DialogResult.Yes)
-
                 {
-
-                    //invItems -= invItem;
-
-                    invItems.Remove(invItem);
-
+                    lstItems.Items.RemoveAt(i);
                     InvItemDB.SaveItems(invItems);
-
-                    FillItemListBox();
-
                 }
 
             }
