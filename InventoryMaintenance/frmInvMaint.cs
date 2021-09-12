@@ -24,6 +24,13 @@ namespace InventoryMaintenance
         {
             // Add a statement here that gets the list of items.
             invItems = InvItemDB.GetItems();
+
+            //foreach (var thing in InvItemDB.GetItems())
+            //{
+            //    lstItems.Items.Add(thing.ToString());
+            //    Console.WriteLine(thing.ToString());
+            //}
+            
             FillItemListBox();
         }
 
@@ -57,21 +64,19 @@ namespace InventoryMaintenance
                 // saves the list of products, and refreshes the list box.
                 // if the deletion is confirmed.
 
-
-                string invItem = lstItems.SelectedItem.ToString();
-                string message = "Are you sure you want to delete " + invItem + "?";
+                
+                string message = "Are you sure you want to delete this item ?";
 
                 DialogResult button = MessageBox.Show(message, "Confirm the delete", MessageBoxButtons.YesNo);
-
 
                 if (button == DialogResult.Yes)
                 {
                     lstItems.Items.RemoveAt(i);
-                    
+                    invItems = InvItemDB.GetItems();
+                    InvItemDB.SaveItems(invItems);
+
                 }
-
-                InvItemDB.SaveItems(invItems);
-
+                
             }
         }
 
