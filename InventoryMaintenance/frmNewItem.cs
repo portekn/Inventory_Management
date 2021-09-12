@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+//Kelli Porter
 
 namespace InventoryMaintenance
 {
@@ -15,9 +16,11 @@ namespace InventoryMaintenance
             InitializeComponent();
         }
 
+        //Kelli Porter
         // Add a statement here that declares the inventory item.
         public InvItem invItem = null;
 
+        //Kelli Porter
         // Add a method here that gets and returns a new item.
         public InvItem GetNewItem() 
         {
@@ -25,6 +28,7 @@ namespace InventoryMaintenance
             return invItem;
         }
 
+        //Kelli Porter
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (IsValidData())

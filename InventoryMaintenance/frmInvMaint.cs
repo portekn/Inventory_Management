@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//Kelli Porter
 
 namespace InventoryMaintenance
 {
@@ -17,9 +18,11 @@ namespace InventoryMaintenance
             InitializeComponent();
         }
 
+        //Kelli Porter
         // Add a statement here that declares the list of items.
-        private List<InvItem> invItems = null; 
+        private List<InvItem> invItems = null;
 
+        //Kelli Porter
         private void frmInvMaint_Load(object sender, EventArgs e)
         {
             // Add a statement here that gets the list of items.
@@ -27,6 +30,7 @@ namespace InventoryMaintenance
             FillItemListBox();
         }
 
+        //Kelli Porter
         private void FillItemListBox()
         {
             // Add code here that loads the list box with the items in the list.
@@ -34,6 +38,7 @@ namespace InventoryMaintenance
             invItems.ForEach(x => lstItems.Items.Add(x.GetDisplayText("    ")));
         }
 
+        //Kelli Porter
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Add code here that creates an instance of the New Item form
@@ -48,7 +53,8 @@ namespace InventoryMaintenance
                 FillItemListBox();
             }
         }
-            private void btnDelete_Click(object sender, EventArgs e)
+        //Kelli Porter
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             int i = lstItems.SelectedIndex;
             if (i != -1)

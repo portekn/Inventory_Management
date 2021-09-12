@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+//Kelli Porter
 
 namespace InventoryMaintenance
 {
     public class InvItem
     {
+        //Kelli Porter
         //----------Properties----------//
         //ItemNo - Gets or sets an int that contains the item’s number.
         public int ItemNo
@@ -18,6 +20,7 @@ namespace InventoryMaintenance
         public decimal Price 
         { get; set;}
 
+        //Kelli Porter
         //----------Methods----------//
         /*GetDisplayText() - Returns a string that contains the item’s number, 
                              description, and price formatted like this:3245649    
@@ -25,6 +28,7 @@ namespace InventoryMaintenance
                              are separated by four spaces.)*/
         public string GetDisplayText(string space) => ItemNo.ToString("00000000") + space + Description + " (" + Price.ToString("C", CultureInfo.CurrentCulture) + ")";
 
+        //Kelli Porter
         //----------Constructor----------//
         //() - Creates an InvItemobject with default values.
         //(itemNo, description, price) - Creates an InvItemobject withthe specified values.
