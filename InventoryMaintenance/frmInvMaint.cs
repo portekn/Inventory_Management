@@ -24,13 +24,6 @@ namespace InventoryMaintenance
         {
             // Add a statement here that gets the list of items.
             invItems = InvItemDB.GetItems();
-
-            //foreach (var thing in InvItemDB.GetItems())
-            //{
-            //    lstItems.Items.Add(thing.ToString());
-            //    Console.WriteLine(thing.ToString());
-            //}
-            
             FillItemListBox();
         }
 
@@ -51,6 +44,7 @@ namespace InventoryMaintenance
             if (invItem != null)
             {
                 invItems.Add(invItem);
+                InvItemDB.SaveItems(invItems);
                 FillItemListBox();
             }
         }
