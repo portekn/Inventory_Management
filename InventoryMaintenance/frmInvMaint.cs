@@ -66,8 +66,10 @@ namespace InventoryMaintenance
                 if (button == DialogResult.Yes)
                 {
                     lstItems.Items.RemoveAt(i);
-                    InvItemDB.SaveItems(invItems);
+                    
                 }
+
+                InvItemDB.SaveItems(invItems);
 
             }
         }
