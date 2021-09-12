@@ -18,7 +18,7 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the list of items.
-        List<InvItem> invItems = null;
+         new List<InvItem> invItems = null;
 
         private void frmInvMaint_Load(object sender, EventArgs e)
         {
@@ -31,13 +31,15 @@ namespace InventoryMaintenance
         {
             lstItems.Items.Clear();
             // Add code here that loads the list box with the items in the list.
-            InvItem.GetDisplayText();
+            lstItems.Items.Add(invItems);
+            
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Add code here that creates an instance of the New Item form
-            frmNewItem.GetNewItem(newItem);
+            frmNewItem.GetNewItem(invItems);
             // and then gets a new item from that form.
             InvItemDB.SaveItems(invItems);
         }
