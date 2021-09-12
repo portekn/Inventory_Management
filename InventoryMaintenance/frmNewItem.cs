@@ -20,7 +20,9 @@ namespace InventoryMaintenance
 
         // Add a method here that gets and returns a new item.
         public InvItem GetNewItem(InvItem invItem) 
-        { return invItem; }
+        {
+            return invItem;
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {

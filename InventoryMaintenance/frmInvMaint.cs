@@ -18,7 +18,7 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the list of items.
-         new List<InvItem> invItems = null;
+         List<InvItem> invItems = null;
 
         private void frmInvMaint_Load(object sender, EventArgs e)
         {
@@ -32,14 +32,12 @@ namespace InventoryMaintenance
             lstItems.Items.Clear();
             // Add code here that loads the list box with the items in the list.
             lstItems.Items.Add(invItems);
-            
-            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Add code here that creates an instance of the New Item form
-            frmNewItem.GetNewItem(invItems);
+            frmNewItem.GetNewItem(invItem);
             // and then gets a new item from that form.
             InvItemDB.SaveItems(invItems);
         }
@@ -50,11 +48,11 @@ namespace InventoryMaintenance
             if (i != -1)
             {
                 // Add code here that displays a dialog box to confirm
-                
                 // the deletion and then removes the item from the list,
+                lstItems.Items.Clear();
                 // saves the list of products, and refreshes the list box
-                InvItemDB.SaveItems(invItems);
                 // if the deletion is confirmed.
+                InvItemDB.SaveItems(invItems);
             }
         }
 
