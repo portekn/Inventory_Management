@@ -23,12 +23,8 @@ namespace InventoryMaintenance
                              description, and price formatted like this:3245649    
                              Agapanthus ($7.95). (The item number and description 
                              are separated by four spaces.)*/
-        public string GetDisplayText(int ItemNo, string Description, decimal Price)
-        {
-            string disText = ItemNo + "    " + Description + " (" + Price.ToString("C", CultureInfo.CurrentCulture) + ")";
-            return disText;
-        
-        }
+        public string GetDisplayText(string space) => ItemNo + space + Description + space + Price.ToString("C", CultureInfo.CurrentCulture);
+
         //----------Constructor----------//
         //() - Creates an InvItemobject with default values.
         //(itemNo, description, price) - Creates an InvItemobject withthe specified values.

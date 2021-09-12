@@ -18,25 +18,19 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the list of items.
-         List<InvItem> invItems = null;
+        private List<InvItem> invItems = null; 
 
         private void frmInvMaint_Load(object sender, EventArgs e)
         {
             // Add a statement here that gets the list of items.
-            InvItemDB.GetItems();
+            invItems = InvItemDB.GetItems();
             FillItemListBox();
         }
 
         private void FillItemListBox()
         {
             // Add code here that loads the list box with the items in the list.
-            lstItems.Items.Clear();
-            InvItem item;
-            for (int i = 0; i < invItems.Count; i++)
-            {
-                item = invItems[i];
-                lstItems.Items.Add(item);
-            }
+            invItems.ForEach(x => lstItems.Items.Add(x.GetDisplayText(",")));
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
