@@ -37,19 +37,19 @@
             // lstItems
             // 
             this.lstItems.FormattingEnabled = true;
-            this.lstItems.ItemHeight = 15;
-            this.lstItems.Location = new System.Drawing.Point(15, 16);
-            this.lstItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstItems.ItemHeight = 20;
+            this.lstItems.Location = new System.Drawing.Point(17, 21);
+            this.lstItems.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.lstItems.Name = "lstItems";
-            this.lstItems.Size = new System.Drawing.Size(306, 154);
+            this.lstItems.Size = new System.Drawing.Size(349, 204);
             this.lstItems.TabIndex = 10;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(350, 17);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(400, 23);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(97, 25);
+            this.btnAdd.Size = new System.Drawing.Size(111, 33);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add Item";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -57,10 +57,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(350, 54);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(400, 72);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 25);
+            this.btnDelete.Size = new System.Drawing.Size(111, 33);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete Item";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -68,10 +68,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(350, 91);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Location = new System.Drawing.Point(400, 121);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(97, 25);
+            this.btnExit.Size = new System.Drawing.Size(111, 33);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -79,18 +79,18 @@
             // 
             // frmInvMaint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(476, 187);
+            this.ClientSize = new System.Drawing.Size(544, 249);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lstItems);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmInvMaint";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inventory Maintenance";
+            this.Text = "Kelli Porter\'s Inventory Maintenance Application";
             this.Load += new System.EventHandler(this.frmInvMaint_Load);
             this.ResumeLayout(false);
 

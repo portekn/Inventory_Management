@@ -61,7 +61,7 @@ namespace InventoryMaintenance
                 if (button == DialogResult.Yes)
                 {
                     lstItems.Items.RemoveAt(i);
-                    invItems.RemoveAt(1);
+                    invItems.RemoveAt(i);
 
                 }
                 // saves the list of products, and refreshes the list box.
