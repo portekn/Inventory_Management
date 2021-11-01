@@ -17,7 +17,7 @@ namespace InventoryMaintenance
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInvMaint());
+            Application.Run(new newStudent());
         }
     }
 }

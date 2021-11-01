@@ -9,7 +9,7 @@ namespace InventoryMaintenance
     {
         private const string Path = @"..\..\Students.xml";
 
-        public static List<Students> GetItems()
+        public static List<Students> GetStudents()
         {
             // create the list
             List<Students> items = new List<Students>();
@@ -45,7 +45,7 @@ namespace InventoryMaintenance
             return items;
         }
 
-        public static void SaveItems(List<Students> items)
+        public static void SaveStudents(List<Students> items)
         {
             // create the XmlWriterSettings object
             XmlWriterSettings settings = new XmlWriterSettings();
