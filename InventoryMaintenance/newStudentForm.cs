@@ -41,7 +41,7 @@ namespace InventoryMaintenance
             // Add code here that creates an instance of the New Item form
             newStudentForm newSForm = new newStudentForm();
             // and then gets a new item from that form.
-            Students student = newSForm.GetNewStudents();
+            Students student = newSForm.GetNewStudent();
 
             if (student != null)
             {
