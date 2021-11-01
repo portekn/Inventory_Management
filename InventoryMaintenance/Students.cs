@@ -18,7 +18,7 @@ namespace InventoryMaintenance
      //Kelli Porter
      //----------Methods----------//
      /*GetDisplayText() - Returns a string that contains the students name and scores */
-    public string GetDisplayText(string space) => Name + " | " + score1 + " | " + score2 + " | " + score3 +;
+    public string GetDisplayText(string space) => Name + " | " + score1 + " | " + score2 + " | " + score3;
 
     //Kelli Porter
     //----------Constructor----------//
